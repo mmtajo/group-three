@@ -3,12 +3,24 @@
     x:Class="pcso_group_three.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:pcso_group_three"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:pcso_group_three.View"
+    Routing.Route="Root"
+    Title="Root">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar
+        Route="Tabs">
+        <Tab
+            Title="Home"
+            Icon="home.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate views:HomePage}"/>
+        </Tab>
+        <!--<Tab 
+            Title="Profile"
+            Icon="person.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate views:ProfilePage}" />
+        </Tab>-->
+    </TabBar>
 
 </Shell>
