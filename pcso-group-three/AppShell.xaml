@@ -21,6 +21,16 @@
             <ShellContent 
                 ContentTemplate="{DataTemplate views:ProfilePage}" />
         </Tab>-->
+        
+    </TabBar>
+    <TabBar
+        Shell.TabBarIsVisible="False"
+        Route="Organization">
+        <Tab
+            Title="OrganizationalPage">
+            <ShellContent 
+                ContentTemplate="{DataTemplate views:OrganizationPage}"/>
+        </Tab>
     </TabBar>
 
 </Shell>

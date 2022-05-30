@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+using System.Net.Http.Headers;
 using CommunityToolkit.Mvvm.Input;
 
 namespace pcso_group_three.ViewModel
 {
-    public partial class HomeViewModel : BaseViewModel
+    public partial class OrganizationViewModel : BaseViewModel
     {
         [ICommand]
-        public void GoToOrganizationPage()
+        public void GoToHome()
         {
-            Shell.Current.GoToAsync("//Organization");
+            Shell.Current.GoToAsync("//Tabs");
         }
+
     }
 }

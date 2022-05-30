@@ -2,17 +2,62 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pcso_group_three.View.HomePage"
-             Title="HomePage">
-    <StackLayout>
-        <Label
-            FontSize="30"
-            Text="Home"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="PCSO Mobile Organization Guide">
+    
+    <StackLayout Margin="10,10,10,10" >
+       
         <Button
+             Command="{Binding GoToOrganizationPageCommand}"
             Text="Office of the Board of Directors"
             FontSize="Body"
             
-            Margin="20,20,20,20" />
+            Margin="5" />
+        <Button
+            Text="Office of the Chairperson"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
+            Text="Office of the Board Secretary"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
+            Text="Office of the General Manager"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
+            Text="Administrative Sector"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
+            Text="Branch Operation Sector"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
+            Text="Charity Sector"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
+            Text="Charity Sector"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
+            Text="Gaming, Product Development and Marketing Sector"
+            FontSize="Body"
+            Margin="5" />
+        <Button
+            Text="Management Services Sector"
+            FontSize="Body"
+            Margin="5" />
+
     </StackLayout>
+
+
+
 </ContentPage>
