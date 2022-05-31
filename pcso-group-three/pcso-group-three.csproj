@@ -56,9 +56,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="OGM.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Resources\Colors.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
