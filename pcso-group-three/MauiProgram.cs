@@ -28,6 +28,23 @@ public static class MauiProgram
         builder.Services.AddSingleton<OrganizationViewModel>();
         builder.Services.AddSingleton<OrganizationPage>();
 
+        builder.Services.AddSingleton<ChairpersonViewModel>();
+        builder.Services.AddSingleton<ChairpersonPage>();
+
+        //OFFICES
+        builder.Services.AddSingleton<BODPage>();
+        builder.Services.AddSingleton<BODViewModel>();
+
+        builder.Services.AddSingleton<OCPage>();
+        builder.Services.AddSingleton<OCViewModel>();
+
+        builder.Services.AddSingleton<OBSPage>();
+        builder.Services.AddSingleton<OBSViewModel>();
+
+        builder.Services.AddSingleton<OGMPage>();
+        builder.Services.AddSingleton<OGMViewModel>();
+
+
 
         return builder.Build();
 	}

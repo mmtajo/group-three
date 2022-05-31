@@ -2,9 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:pcso_group_three.Model"
-             x:Class="pcso_group_three.View.OrganizationPage"
-             Title="Office of the Board of Directors">
-
+             x:Class="pcso_group_three.View.ChairpersonPage"
+             Title="Chairperson">
     <StackLayout >
         <CollectionView>
             <CollectionView.ItemsSource>
@@ -13,26 +12,6 @@
                         Name="Anselmo Simeon P. Pinili"
                         Position="Chairperson"
                         ImageURL="https://www.pcso.gov.ph/pcsofiles/organization/AnselmoSimeonPinili-big.jpg"
-                    />
-                    <model:Officer 
-                        Name="Royina M. Garma" 
-                        Position="Vice-Chairperson and General Manager"
-                        ImageURL="https://www.pcso.gov.ph/pcsofiles/organization/RoyinaGarma(3).jpg"
-                    />
-                    <model:Officer 
-                        Name="Marlon U. Balite" 
-                        Position="Member of the Board"
-                        ImageURL="https://www.pcso.gov.ph/pcsofiles/organization/MarlonBalite.jpg"
-                    />
-                    <model:Officer 
-                        Name="Sandra M. Cam" 
-                        Position="Member of the Board"
-                        ImageURL="https://www.pcso.gov.ph/pcsofiles/organization/SandraCam.jpg"
-                    />
-                    <model:Officer 
-                        Name="Ramon Ike V. Señeres" 
-                        Position="Member of the Board"
-                        ImageURL="https://www.pcso.gov.ph/pcsofiles/organization/RamonIkeSeneres.jpg"
                     />
                 </x:Array>
             </CollectionView.ItemsSource>
@@ -59,20 +38,6 @@
             FontSize="Body"
             VerticalOptions="EndAndExpand"
             Margin="20,20,20,20"/>
-        <Button
-            Text="Chairperson"
-            Command="{Binding GoToChairpersonPageCommand}"
-            FontSize="Body"
-            VerticalOptions="EndAndExpand"
-            Margin="20,20,20,20"/>
 
     </StackLayout>
-
-
-
-
-
-    
-    
-    
 </ContentPage>
