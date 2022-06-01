@@ -7,6 +7,7 @@
     <StackLayout Margin="10,10,10,10" >
        
         <Button
+            
              Command="{Binding GoToOrganizationPageCommand}"
             Text="Office of the Board of Directors"
             FontSize="Body"
