@@ -31,6 +31,8 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<OfficerService>();
 
+        builder.Services.AddSingleton<BODPage>();
+        builder.Services.AddSingleton<BODViewModel>();
 
         return builder.Build();
 	}
