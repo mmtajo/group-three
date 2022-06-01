@@ -60,49 +60,8 @@
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
                            HorizontalOptions="FillAndExpand"
-                           VerticalOptions="CenterAndExpand"/>
-
-
-        <!--<StackLayout Padding="10" >
-            <CollectionView
-            ItemsSource="{Binding Officers}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:Officer">
-                        <Grid Padding="5"
-                          BackgroundColor="Transparent">
-                            <Grid Padding="0"
-                            ColumnDefinitions="125, *">
-                                <Image Aspect="AspectFill"
-                                   Source="{Binding ImageURL}"
-                                   WidthRequest="75"
-                                   HeightRequest="100"/>
-                                <VerticalStackLayout Grid.Column="1"
-                                                     Padding="1"
-                                                     VerticalOptions="Center">
-                                    <Label Text="{Binding Name}"
-                                       FontSize="20"
-                                       />
-                                    <Label Text="{Binding Position}"/>
-                                </VerticalStackLayout>
-                            </Grid>
-                        </Grid>
-                    </DataTemplate>
-
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
-            <Button
-            Text="Back"
-            Command="{Binding GoToHomeCommand}"
-            FontSize="Body"
-            VerticalOptions="EndAndExpand"
-            Margin="20,20,20,20"/>
-
-            <ActivityIndicator IsVisible="{Binding IsBusy}"
-                           IsRunning="{Binding IsBusy}"
-                           HorizontalOptions="FillAndExpand"
-                           VerticalOptions="CenterAndExpand"/>
-        </StackLayout>-->
+                           VerticalOptions="CenterAndExpand"
+                           Grid.ColumnSpan="2"/>
 
     </Grid>
 

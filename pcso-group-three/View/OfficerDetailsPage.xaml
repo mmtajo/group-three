@@ -27,16 +27,17 @@
                        CornerRadius="80"
                        HorizontalOptions="Center"
                        IsClippedToBounds="True"
-                       Padding="5"
+                       Padding="10"
                        Margin="0,90,0,0"
-                       BackgroundColor="White">
+                       BackgroundColor="Black">
 
                     <Image Aspect="AspectFill"
                            HeightRequest="140"
                            WidthRequest="140"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
-                           Source="{Binding Officer.ImageURL}"/>
+                           Source="{Binding Officer.ImageURL}"
+                           />
                 </Frame>
 
                 
