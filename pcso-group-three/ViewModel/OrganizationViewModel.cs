@@ -11,6 +11,7 @@ using pcso_group_three.Services;
 using System.Diagnostics;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Text.Json;
+using pcso_group_three.View;
 
 namespace pcso_group_three.ViewModel
 {
@@ -23,11 +24,25 @@ namespace pcso_group_three.ViewModel
         {
             Title = "Organization";
             this.officerService = officerService;
-            OnInitializedAsync();
+            GetOfficer();
+        }
+
+        [ICommand]
+        async Task GoToOfficerDetailsAsync(Officer officer)
+        {
+            if (officer is null)
+                return;
+            
+            await Shell.Current.GoToAsync($"{nameof(OfficerDetailsPage)}", true,
+                    new Dictionary<string, object>
+                    {
+                        {"Officer", officer}
+                    });
+
         }
 
         //[ICommand]
-        async Task OnInitializedAsync()
+        async Task GetOfficer()
         {
             if (IsBusy)
                 return;
@@ -64,10 +79,5 @@ namespace pcso_group_three.ViewModel
             Shell.Current.GoToAsync("//Tabs");
         }
 
-        [ICommand]
-        public void GoToChairpersonPage()
-        {
-            Shell.Current.GoToAsync("//Chairperson");
-        }
     }
 }

@@ -14,24 +14,16 @@
             
             Margin="5" />
         <Button
-            Command="{Binding GoToBODPageCommand}"
-            Text="Office of the Board of Directors"
-            FontSize="Body"
-            Margin="5" />
-        <Button
-            Command="{Binding GoToOCPageCommand}"
             Text="Office of the Chairperson"
             FontSize="Body"
             
             Margin="5" />
         <Button
-            Command="{Binding GoToOBSPageCommand}"
             Text="Office of the Board Secretary"
             FontSize="Body"
             
             Margin="5" />
         <Button
-            Command="{Binding GoToOGMPageCommand}"
             Text="Office of the General Manager"
             FontSize="Body"
             
@@ -43,6 +35,11 @@
             Margin="5" />
         <Button
             Text="Branch Operation Sector"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
+            Text="Charity Sector"
             FontSize="Body"
             
             Margin="5" />

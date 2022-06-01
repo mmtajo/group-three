@@ -15,27 +15,5 @@ namespace pcso_group_three.ViewModel
         {
             Shell.Current.GoToAsync("//Organization");
         }
-
-        //OFFICES
-        [ICommand]
-        public void GoToBODPage()
-        {
-            Shell.Current.GoToAsync("//BOD");
-        }
-        [ICommand]
-        public void GoToOCPage()
-        {
-            Shell.Current.GoToAsync("//OC");
-        }
-        [ICommand]
-        public void GoToOBSPage()
-        {
-            Shell.Current.GoToAsync("//OBS");
-        }
-        [ICommand]
-        public void GoToOGMPage()
-        {
-            Shell.Current.GoToAsync("//OGM");
-        }
     }
 }

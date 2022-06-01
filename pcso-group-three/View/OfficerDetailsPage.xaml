@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:pcso_group_three.ViewModel"
+             x:DataType="viewmodel:OfficerDetailsViewModel"
+             x:Class="pcso_group_three.View.OfficerDetailsPage"
+             Title="{Binding Officer.Position}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="0">
+            <Grid ColumnDefinitions="*,Auto,*"
+                  RowDefinitions="160,Auto"
+                  BackgroundColor="Transparent"
+                  >
+
+                <BoxView Color="LightBlue"
+                         Grid.ColumnSpan="3"
+                         HeightRequest="160"
+                         HorizontalOptions="FillAndExpand"
+                         
+                         />
+
+                <Frame Grid.RowSpan="2"
+                       
+                       HeightRequest="140"
+                       WidthRequest="140"
+                       CornerRadius="80"
+                       HorizontalOptions="Center"
+                       IsClippedToBounds="True"
+                       Padding="5"
+                       Margin="0,90,0,0"
+                       BackgroundColor="White">
+
+                    <Image Aspect="AspectFill"
+                           HeightRequest="140"
+                           WidthRequest="140"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source="{Binding Officer.ImageURL}"/>
+                </Frame>
+
+                
+                <Label Text="{Binding Officer.Name}"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                     
+                       Grid.Row="1"
+                       Margin="0,10,20,0"
+                       Grid.Column="2"
+
+                       />
+            </Grid>
+            
+            <VerticalStackLayout Padding="30" Spacing="10"
+                                 BackgroundColor="Transparent"
+                                 
+                                 
+                                 >
+                
+                <Label Text="{Binding Officer.Department}"
+                       FontSize="Body"/>
+                <Label Text="{Binding Officer.Description}"
+                       FontSize="Body"/>
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>
