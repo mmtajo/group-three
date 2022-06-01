@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:pcso_group_three.Model"
+             x:Class="pcso_group_three.View.ChairpersonPage"
+             Title="Chairperson">
+    <StackLayout >
+        <CollectionView>
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type model:Officer}">
+                    <model:Officer 
+                        Name="Anselmo Simeon P. Pinili"
+                        Position="Chairperson"
+                        ImageURL="https://www.pcso.gov.ph/pcsofiles/organization/AnselmoSimeonPinili-big.jpg"
+                    />
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Officer">
+                    <HorizontalStackLayout Margin="5,1,5,1"  Padding="10,10,10,10" BackgroundColor="#EEEEEE" HorizontalOptions="Fill">
+                        <Image Source="{Binding ImageURL}"
+                           
+                           />
+                        <VerticalStackLayout Padding="10,10,10,10" Margin="5,1,5,1" Spacing="4" VerticalOptions="FillAndExpand">
+                            <Label Text="{Binding Name}" FontSize="24"/>
+                            <Label Text="{Binding Position}" FontSize="12"/>
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+        <Button
+            Text="Back"
+            Command="{Binding GoToHomeCommand}"
+            FontSize="Body"
+            VerticalOptions="EndAndExpand"
+            Margin="20,20,20,20"/>
+
+    </StackLayout>
+</ContentPage>

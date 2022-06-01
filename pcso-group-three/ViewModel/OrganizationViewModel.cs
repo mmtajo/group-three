@@ -64,5 +64,10 @@ namespace pcso_group_three.ViewModel
             Shell.Current.GoToAsync("//Tabs");
         }
 
+        [ICommand]
+        public void GoToChairpersonPage()
+        {
+            Shell.Current.GoToAsync("//Chairperson");
+        }
     }
 }
