@@ -4,34 +4,47 @@
              xmlns:model="clr-namespace:pcso_group_three.Model"
              xmlns:viewmodel="clr-namespace:pcso_group_three.ViewModel"
              x:DataType="viewmodel:OrganizationViewModel"
-             Title="{Binding Title}"
-             x:Class="pcso_group_three.View.OrganizationPage">
-
-    <StackLayout >
-        <CollectionView
-            ItemsSource="{Binding Officers}">
+             x:Class="pcso_group_three.View.OrganizationPage"
+             Title="{Binding Title}">
+    
+    <Grid ColumnDefinitions="*,*"
+          ColumnSpacing="5"
+          RowDefinitions="*,Auto"
+          RowSpacing="0"
+          Padding="10">
+        <CollectionView BackgroundColor="Transparent"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Officers}"
+                        SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Officer">
-                    <Grid Padding="5"
-                          BackgroundColor="Transparent">
-                        <Grid Padding="0"
-                            ColumnDefinitions="125, *">
-                            <Image Aspect="AspectFill"
-                                   Source="{Binding ImageURL}"
-                                   WidthRequest="75"
-                                   HeightRequest="100"/>
-                            <VerticalStackLayout Grid.Column="1"
-                                                     Padding="1"
+                    <Grid Padding="2">
+                        <Frame HeightRequest="125"
+                               Padding="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:OrganizationViewModel}}, Path=GoToOfficerDetailsCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid Padding="0"
+                                  ColumnDefinitions="75,*">
+                                <Image Aspect="AspectFill" 
+                                       Source="{Binding ImageURL}"
+                                       WidthRequest="75"
+                                       HeightRequest="125"/>
+                                <VerticalStackLayout Grid.Column="1"
+                                                     Padding="10"
+                                                     BackgroundColor="Transparent"
                                                      VerticalOptions="Center">
-                                <Label Text="{Binding Name}"
-                                       FontSize="20"
-                                       />
-                                <Label Text="{Binding Position}"/>
-                            </VerticalStackLayout>
-                        </Grid>
+                                    <Label Text="{Binding Name}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding Position}"
+                                           FontSize="20"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
                     </Grid>
                 </DataTemplate>
-
             </CollectionView.ItemTemplate>
         </CollectionView>
 
@@ -39,12 +52,17 @@
             Text="Back"
             Command="{Binding GoToHomeCommand}"
             FontSize="Body"
-            VerticalOptions="EndAndExpand"
-            Margin="20,20,20,20"/>
+            
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Margin="5"/>
 
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
                            HorizontalOptions="FillAndExpand"
-                           VerticalOptions="CenterAndExpand"/>
-    </StackLayout>
+                           VerticalOptions="CenterAndExpand"
+                           Grid.ColumnSpan="2"/>
+
+    </Grid>
+
 </ContentPage>

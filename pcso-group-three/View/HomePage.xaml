@@ -74,6 +74,11 @@
             TextColor="black"
             Margin="5" />
         <Button
+            Text="Charity Sector"
+            FontSize="Body"
+            
+            Margin="5" />
+        <Button
             Text="Gaming, Product Development and Marketing Sector"
             FontSize="Body"
             BackgroundColor="#ffff80"

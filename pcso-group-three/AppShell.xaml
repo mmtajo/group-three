@@ -27,14 +27,4 @@
         </Tab>
     </TabBar>
 
-    <TabBar
-        Shell.TabBarIsVisible="False"
-        Route="BOD">
-        <Tab
-            Title="Office of the Board of Directors">
-            <ShellContent 
-                ContentTemplate="{DataTemplate views:BODPage}"/>
-        </Tab>
-    </TabBar>
-
 </Shell>
