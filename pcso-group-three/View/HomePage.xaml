@@ -2,62 +2,88 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pcso_group_three.View.HomePage"
-             Title="PCSO Mobile Organization Guide">
-    
-    <StackLayout Margin="10,10,10,10" >
+             Title="PCSO Mobile Organization Guide"
+             >
+
+    <StackLayout BackgroundColor="#4da6ff">
        
-        <Button
+        <!--<Button
             
-             Command="{Binding GoToOrganizationPageCommand}"
+            Command="{Binding GoToOrganizationPageCommand}"
+            CommandParameter="1"
             Text="Office of the Board of Directors"
             FontSize="Body"
-            
+            BackgroundColor="#ffff80"
+            TextColor="black"
+            Margin="5" />-->
+        <Button
+            Command="{Binding GoToBODPageCommand}"
+            x:Name="SampleButton"
+            Clicked="SampleButton_Clicked"
+            CommandParameter="2"
+            Text="SampleOnly"
+            FontSize="Body"
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
+        
         <Button
             Command="{Binding GoToBODPageCommand}"
             Text="Office of the Board of Directors"
             FontSize="Body"
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
         <Button
-            Command="{Binding GoToOCPageCommand}"
+            Command="{Binding GoToBODPageCommand}"
             Text="Office of the Chairperson"
             FontSize="Body"
-            
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
         <Button
-            Command="{Binding GoToOBSPageCommand}"
+            Command="{Binding GoToBODPageCommand}"
             Text="Office of the Board Secretary"
             FontSize="Body"
-            
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
         <Button
-            Command="{Binding GoToOGMPageCommand}"
+            Command="{Binding GoToBODPageCommand}"
             Text="Office of the General Manager"
             FontSize="Body"
-            
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
         <Button
             Text="Administrative Sector"
             FontSize="Body"
-            
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
         <Button
             Text="Branch Operation Sector"
             FontSize="Body"
-            
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
         <Button
             Text="Charity Sector"
             FontSize="Body"
-            
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
         <Button
             Text="Gaming, Product Development and Marketing Sector"
             FontSize="Body"
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
         <Button
             Text="Management Services Sector"
             FontSize="Body"
+            BackgroundColor="#ffff80"
+            TextColor="black"
             Margin="5" />
 
     </StackLayout>

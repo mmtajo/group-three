@@ -6,6 +6,6 @@ public partial class BODPage : ContentPage
 	public BODPage(BODViewModel bODViewModel)
 	{
 		InitializeComponent();
-        BindingContext = bODViewModel;
+		BindingContext = bODViewModel;
     }
 }
