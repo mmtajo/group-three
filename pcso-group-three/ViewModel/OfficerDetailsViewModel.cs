@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace pcso_group_three.ViewModel
 {
-    [QueryProperty("Officer", "Officer")]
+    //[QueryProperty("Officer", "Officer")]
+    [QueryProperty("Office", "Office")]
     public partial class OfficerDetailsViewModel : BaseViewModel
     {
         public OfficerDetailsViewModel()
@@ -16,6 +17,7 @@ namespace pcso_group_three.ViewModel
         }
 
         [ObservableProperty]
-        Officer officer;
+        //Officer officer;
+        Office office;
     }
 }

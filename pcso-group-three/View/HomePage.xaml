@@ -18,38 +18,27 @@
             Margin="5" />-->
         <Button
             Command="{Binding GoToBODPageCommand}"
-            x:Name="SampleButton"
-            Clicked="SampleButton_Clicked"
-            CommandParameter="2"
-            Text="SampleOnly"
-            FontSize="Body"
-            BackgroundColor="#ffff80"
-            TextColor="black"
-            Margin="5" />
-        
-        <Button
-            Command="{Binding GoToBODPageCommand}"
             Text="Office of the Board of Directors"
             FontSize="Body"
             BackgroundColor="#ffff80"
             TextColor="black"
             Margin="5" />
         <Button
-            Command="{Binding GoToBODPageCommand}"
+            Command="{Binding GoToOCPageCommand}"
             Text="Office of the Chairperson"
             FontSize="Body"
             BackgroundColor="#ffff80"
             TextColor="black"
             Margin="5" />
         <Button
-            Command="{Binding GoToBODPageCommand}"
+            Command="{Binding GoToOBSPageCommand}"
             Text="Office of the Board Secretary"
             FontSize="Body"
             BackgroundColor="#ffff80"
             TextColor="black"
             Margin="5" />
         <Button
-            Command="{Binding GoToBODPageCommand}"
+            Command="{Binding GoToOGMPageCommand}"
             Text="Office of the General Manager"
             FontSize="Body"
             BackgroundColor="#ffff80"
@@ -72,11 +61,6 @@
             FontSize="Body"
             BackgroundColor="#ffff80"
             TextColor="black"
-            Margin="5" />
-        <Button
-            Text="Charity Sector"
-            FontSize="Body"
-            
             Margin="5" />
         <Button
             Text="Gaming, Product Development and Marketing Sector"

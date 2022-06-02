@@ -15,19 +15,18 @@ using pcso_group_three.View;
 
 namespace pcso_group_three.ViewModel
 {
-    public partial class OrganizationViewModel : BaseViewModel
+    public partial class OCViewModel : BaseViewModel
     {
-        //OfficerService officerService;
-        //public ObservableCollection<Officer> Officers { get; } = new ObservableCollection<Officer>();
         OfficeService officeService;
+
         public ObservableCollection<Office> Offices { get; } = new ObservableCollection<Office>();
 
-        public OrganizationViewModel(OfficerService officerService)
+        public OCViewModel(OfficeService officeService)
         {
             Title = "Organization";
             this.officeService = officeService;
-            //GetOfficer();
-            GetByOfficeIDAsync(1);
+            //OnInitializedAsync();
+            GetByOfficeIDAsync(2);
         }
 
         [ICommand]
@@ -35,7 +34,7 @@ namespace pcso_group_three.ViewModel
         {
             if (office is null)
                 return;
-            
+
             await Shell.Current.GoToAsync($"{nameof(OfficerDetailsPage)}", true,
                     new Dictionary<string, object>
                     {
@@ -44,30 +43,31 @@ namespace pcso_group_three.ViewModel
 
         }
 
+
         //[ICommand]
-        async Task GetOfficer()
+        async Task OnInitializedAsync()
         {
             if (IsBusy)
                 return;
             try
             {
                 IsBusy = true;
-                var officers = await officeService.GetOffices();
+                var offices = await officeService.GetOffices();
 
-                if (officers.Count != 0)
+                if (offices.Count != 0)
                 {
                     Offices.Clear();
                 }
-                foreach (var officer in officers)
+                foreach (var office in offices)
                 {
-                    Offices.Add(officer);
+                    Offices.Add(office);
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
                 await Shell.Current.DisplayAlert("Error!",
-                    $"Unabale to get Officer: {ex.Message}", "OK");
+                    $"Unabale to get Office: {ex.Message}", "OK");
 
             }
             finally
@@ -75,7 +75,11 @@ namespace pcso_group_three.ViewModel
                 IsBusy = false;
             }
         }
-
+        [ICommand]
+        public void GoToHome()
+        {
+            Shell.Current.GoToAsync("//Tabs");
+        }
 
         async Task GetByOfficeIDAsync(int officeid)
         {
@@ -107,12 +111,6 @@ namespace pcso_group_three.ViewModel
             {
                 IsBusy = false;
             }
-        }
-
-        [ICommand]
-        public void GoToHome()
-        {
-            Shell.Current.GoToAsync("//Tabs");
         }
 
     }

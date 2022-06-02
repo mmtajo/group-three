@@ -37,6 +37,15 @@ public static class MauiProgram
         builder.Services.AddSingleton<BODPage>();
         builder.Services.AddSingleton<BODViewModel>();
 
+        builder.Services.AddSingleton<OCPage>();
+        builder.Services.AddSingleton<OCViewModel>();
+
+        builder.Services.AddSingleton<OBSPage>();
+        builder.Services.AddSingleton<OBSViewModel>();
+
+        builder.Services.AddSingleton<OGMPage>();
+        builder.Services.AddSingleton<OGMViewModel>();
+
         builder.Services.AddSingleton<OfficeService>();
 
         return builder.Build();

@@ -25,7 +25,7 @@ namespace pcso_group_three.Services
             if(officerList?.Count > 0)
                 return officerList;
 
-            string requestURL = "https://pcso-group3-backend.azurewebsites.net/officers";
+            string requestURL = "https://pcso-linfred-backend.azurewebsites.net/api/Offices";
 
             try
             {

@@ -12,8 +12,4 @@ public partial class HomePage : ContentPage
         BindingContext = homeViewModel;
     }
 
-    private void SampleButton_Clicked(object sender, EventArgs e)
-    {
-        
-    }
 }

@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:pcso_group_three.Model"
              xmlns:viewmodel="clr-namespace:pcso_group_three.ViewModel"
-             x:DataType="viewmodel:OrganizationViewModel"
-             x:Class="pcso_group_three.View.OrganizationPage"
-             Title="{Binding Title}">
+             x:DataType="viewmodel:OBSViewModel"
+             x:Class="pcso_group_three.View.OBSPage"
+             Title="Office of the Board Secretary">
+    
+    
     
     <Grid ColumnDefinitions="*,*"
           ColumnSpacing="5"
@@ -23,7 +25,7 @@
                                Padding="0">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer CommandParameter="{Binding .}"
-                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:OrganizationViewModel}}, Path=GoToOfficerDetailsCommand}"/>
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:OBSViewModel}}, Path=GoToOfficerDetailsCommand}"/>
                             </Frame.GestureRecognizers>
                             <Grid Padding="0"
                                   ColumnDefinitions="75,*">

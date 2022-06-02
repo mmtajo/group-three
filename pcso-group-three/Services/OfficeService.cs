@@ -48,8 +48,8 @@ namespace pcso_group_three.Services
 
         public async Task<List<Office>> GetOfficesByOfficeid(int officeID)
         {
-            if (officeList?.Count > 0)
-                return officeList;
+            //if (officeList?.Count > 0)
+            //    return officeList;
 
             string requestURL = "https://pcso-linfred-backend.azurewebsites.net/api/Offices/Officer/"+officeID;
 

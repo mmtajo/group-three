@@ -4,7 +4,7 @@
              xmlns:viewmodel="clr-namespace:pcso_group_three.ViewModel"
              x:DataType="viewmodel:OfficerDetailsViewModel"
              x:Class="pcso_group_three.View.OfficerDetailsPage"
-             Title="{Binding Officer.Position}">
+             Title="{Binding Office.position}">
 
     <ScrollView>
         <VerticalStackLayout Padding="0">
@@ -36,12 +36,12 @@
                            WidthRequest="140"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
-                           Source="{Binding Officer.ImageURL}"
+                           Source="{Binding Office.imageURL}"
                            />
                 </Frame>
 
                 
-                <Label Text="{Binding Officer.Name}"
+                <Label Text="{Binding Office.name}"
                        FontSize="Medium"
                        FontAttributes="Bold"
                      
@@ -58,9 +58,9 @@
                                  
                                  >
                 
-                <Label Text="{Binding Officer.Department}"
+                <Label Text="{Binding Office.department}"
                        FontSize="Body"/>
-                <Label Text="{Binding Officer.Description}"
+                <Label Text="{Binding Office.description}"
                        FontSize="Body"/>
             </VerticalStackLayout>
             
